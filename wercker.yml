@@ -1,7 +1,6 @@
 box: wercker/default
 build:
   steps:
-    - jshint
     - script:
         name: Make $HOME/.ssh directory
         code: mkdir -p $HOME/.ssh
