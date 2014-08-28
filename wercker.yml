@@ -4,18 +4,6 @@ build:
     - script:
         name: Make $HOME/.ssh directory
         code: mkdir -p $HOME/.ssh
-    - create-file:
-        name: Put SSH public key
-        filename: $HOME/.ssh/id_rsa.pub
-        overwrite: true
-        hide-from-log: true
-        content: $DIGITALOCEAN_SSH_KEY_PUBLIC
-    - create-file:
-        name: Put SSH private key
-        filename: $HOME/.ssh/id_rsa
-        overwrite: true
-        hide-from-log: true
-        content: $DIGITALOCEAN_SSH_KEY_PRIVATE
     - script:
         name: Run chmod 0400 $HOME/.ssh/id_rsa
         code: chmod 0400 $HOME/.ssh/id_rsa
