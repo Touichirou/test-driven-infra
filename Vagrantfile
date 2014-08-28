@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   EOF
 
   config.vm.provider :digital_ocean do |provider, override|
-    override.ssh.private_key_path = "/Users/Touichirou/Documents/sshkey/digitalOcean_rsa"
+    override.ssh.private_key_path = "~/.ssh/id_rsa"
     override.vm.box               = "digital_ocean"
     override.vm.box_url           = "http://github.com/smdahlen/vagrant-digitalocean/raw/master/box/digital_ocean.box"
     provider.client_id            = ENV["DIGITALOCEAN_CLIENT_ID"]
