@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     provider.client_id            = ENV["DIGITALOCEAN_CLIENT_ID"]
     provider.api_key              = ENV["DIGITALOCEAN_API_KEY"]
     provider.token                = ENV["DIGITALOCEAN_TOKEN"]
-    provider.image                = "CentOS 6.4 x64"
+    provider.image                = "6.5 x64"
     provider.region               = "sfo1"
     provider.size                 = "512MB"
     provider.ca_path              = ENV["SSL_CERT_FILE"]
